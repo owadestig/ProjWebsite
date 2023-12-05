@@ -32,7 +32,10 @@
             <h1>Progress Report</h1>
           </div>
           <div class="box-body">
-            <p>No progress as of yet</p>
+            <p>
+              Back-end almost complete, some front-end components are complete.
+              No finished views as of yet though. Most endpoints are in place.
+            </p>
           </div>
         </div>
         <div class="spacing-box"></div>
@@ -47,7 +50,7 @@
       </div>
       <div class="lane-spacer"></div>
       <div class="lane">
-        <div class="box-long">
+        <div class="box-long-team">
           <div class="box-title">
             <h1>The Team</h1>
           </div>
@@ -58,6 +61,7 @@
             <div class="box-name-title">
               <p>Group Manager</p>
             </div>
+            <img class="profile-pic" :src="require('./Asheproj.jpg')" />
           </div>
           <div class="box-name">
             <div class="box-name-name">
@@ -66,14 +70,16 @@
             <div class="box-name-title">
               <p>Responsible for Testing</p>
             </div>
+            <img class="profile-pic" :src="require('./Kimproj.png')" />
           </div>
           <div class="box-name">
             <div class="box-name-name">
               <p>Gustav Nolgren</p>
             </div>
             <div class="box-name-title">
-              <p>Responsible for User Interface</p>
+              <p>Responsible for Integration</p>
             </div>
+            <img class="profile-pic" :src="require('./GNproj.jpg')" />
           </div>
           <div class="box-name">
             <div class="box-name-name">
@@ -82,14 +88,16 @@
             <div class="box-name-title">
               <p>Responsible for Backend</p>
             </div>
+            <img class="profile-pic" :src="require('./JTproj.png')" />
           </div>
           <div class="box-name">
             <div class="box-name-name">
               <p>Oscar Wadestig</p>
             </div>
             <div class="box-name-title">
-              <p>Responsible for Integration</p>
+              <p>Responsible for UI</p>
             </div>
+            <img class="profile-pic" :src="require('./OWproj.jpg')" />
           </div>
         </div>
       </div>
@@ -144,6 +152,16 @@ export default {
   background-color: #1a1d28;
 }
 
+.profile-pic {
+  position: relative;
+  top: -75%;
+  left: 77%;
+  width: 15%; /* Set the desired width */
+  height: 70%; /* Set the desired height */
+  border-radius: 50%; /* Make it round */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
 .big-box {
   position: absolute;
   display: flex;
@@ -176,6 +194,20 @@ export default {
   background-color: #2d3139;
 }
 
+.box-long-team {
+  text-align: center;
+  width: 90%;
+  height: 93%;
+  background-color: #2d3139;
+}
+
+.box-long-team-profile-pic {
+  text-align: left;
+  width: 10%;
+  height: 80%;
+  background-color: #fff;
+}
+
 .box-title {
   top: 0;
   left: 10%;
@@ -201,7 +233,7 @@ export default {
 
 .box-name {
   text-align: left;
-  width: 100;
+  width: 100%;
   height: 14%;
   margin-left: 10%;
   font-size: 120%;
@@ -209,14 +241,14 @@ export default {
 
 .box-name-name {
   text-align: left;
-  width: 100%;
+  width: 70%;
   height: 50%;
   color: #e5e5e5;
   font-weight: bold;
 }
 
 .box-name-title {
-  width: 100%;
+  width: 70%;
   height: 50%;
   color: #e5e5e5;
   margin-top: -10%;
